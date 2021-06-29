@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var lbutton: UIButton!
     @IBOutlet weak var sw1: UISwitch!
     
+    @IBOutlet weak var slider: UISlider!
     var ueberschrift2: UILabel!
 
 
@@ -30,6 +31,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func klick(_ sender: Any) {
+        alert()
         if sender as? UIButton == lbutton {
         ueberschrift.text="links"
         } else if sender as? UIButton == rbutton {
@@ -43,6 +45,25 @@ class ViewController: UIViewController {
             ueberschrift.text="Klick rechts oder links"
             sw1.setOn(false,animated:true)
         }
+    }
+    
+    
+    @IBAction func sliderctrl(_ sender: Any) {
+        if sender as? UISlider == slider{
+          
+            ueberschrift.alpha=CGFloat(slider.value)
+            
+        }
+    }
+    
+    func alert() {
+        let pop=UIAlertController(title: "Klick", message: "geklickt", preferredStyle: .actionSheet)
+        
+        pop.addAction(UIAlertAction(title: "OK", style: .default, handler: .none
+                                    
+        ))
+        
+        present(pop, animated: true, completion: .none)
     }
     
 }

@@ -22,8 +22,8 @@
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="zPH-6s-dmS">
-                                <rect key="frame" x="85" y="302" width="220" height="128"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bsdwest.png" translatesAutoresizingMaskIntoConstraints="NO" id="zPH-6s-dmS">
+                                <rect key="frame" x="85" y="301" width="220" height="129.33333333333337"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="129.33333333333331" id="Ivq-J7-7m8"/>
                                 </constraints>
@@ -66,6 +66,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zJ8-Ru-4XO">
+                                <rect key="frame" x="136" y="623" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderctrl:" destination="BYZ-38-t0r" eventType="valueChanged" id="LBE-dS-39L"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
@@ -89,6 +96,7 @@
                     <connections>
                         <outlet property="lbutton" destination="t9W-E5-EQb" id="7G4-Ad-703"/>
                         <outlet property="rbutton" destination="Gtm-sL-IB3" id="qyN-2d-3GA"/>
+                        <outlet property="slider" destination="zJ8-Ru-4XO" id="uyV-UC-ExZ"/>
                         <outlet property="sw1" destination="Sn0-ME-cBl" id="GO5-vB-m9n"/>
                         <outlet property="ueberschrift" destination="NKE-6W-8c3" id="x5g-n2-8dO"/>
                     </connections>
@@ -99,7 +107,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="bsdwest.png" width="371" height="136"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
