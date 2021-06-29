@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var slider: UISlider!
     var ueberschrift2: UILabel!
-
+    var  klickcounter=0
 
 
     override func viewDidLoad() {
@@ -26,23 +26,36 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         print("test")
-        ueberschrift.text="Taste drücken"
+        let defaults = UserDefaults.standard
+        klickcounter = defaults.integer(forKey: "klicker")
+        ueberschrift.text="Taste drücken \(klickcounter)"
+        
         
     }
 
     @IBAction func klick(_ sender: Any) {
-        alert()
+        //alert()
+        let defaults = UserDefaults.standard;
+
         if sender as? UIButton == lbutton {
-        ueberschrift.text="links"
+            if klickcounter>0{
+                klickcounter-=1
+            }
+        ueberschrift.text="links \(klickcounter)"
         } else if sender as? UIButton == rbutton {
-            ueberschrift.text="rechts"    }
+            
+                klickcounter+=1
+            
+            ueberschrift.text="rechts \(klickcounter)"    }
+        defaults.setValue(klickcounter, forKey: "klicker")
     }
     
-    
+     
     @IBAction func swctrl(_ sender: Any) {
         
         if sw1.isOn{
-            ueberschrift.text="Klick rechts oder links"
+            klickcounter=0
+            ueberschrift.text="Klick rechts oder links \(klickcounter)"
             sw1.setOn(false,animated:true)
         }
     }
