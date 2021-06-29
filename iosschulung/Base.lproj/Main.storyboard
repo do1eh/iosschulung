@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eKm-En-7yS">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -8,6 +8,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="M3F-BY-tfM">
+            <objects>
+                <navigationController id="eKm-En-7yS" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b8L-kt-psE">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ltf-gj-9tO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pvq-uS-CiM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1246" y="70"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -21,6 +37,9 @@
                                 <state key="normal" title="Klick mich">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="2sB-ro-uLu" kind="show" id="k38-R2-LtD"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bsdwest.png" translatesAutoresizingMaskIntoConstraints="NO" id="zPH-6s-dmS">
                                 <rect key="frame" x="85" y="301" width="220" height="129.33333333333337"/>
@@ -29,7 +48,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gtm-sL-IB3">
-                                <rect key="frame" x="298" y="119" width="48" height="22"/>
+                                <rect key="frame" x="298" y="163" width="48" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="2zS-Xq-G0A"/>
                                 </constraints>
@@ -93,6 +112,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NKE-6W-8c3" secondAttribute="trailing" constant="107" id="wa3-Ax-gCl"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="RL2-a0-VDo"/>
                     <connections>
                         <outlet property="lbutton" destination="t9W-E5-EQb" id="7G4-Ad-703"/>
                         <outlet property="rbutton" destination="Gtm-sL-IB3" id="qyN-2d-3GA"/>
@@ -105,11 +125,71 @@
             </objects>
             <point key="canvasLocation" x="-204.61538461538461" y="69.66824644549763"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="cQh-Z0-mxB">
+            <objects>
+                <viewController id="2sB-ro-uLu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mMk-pZ-YDf">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="sgC-uF-yuo"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="BUS-fl-fq9">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="JEe-xg-9KE">
+                            <connections>
+                                <segue destination="r6j-H0-8lv" kind="show" id="zuV-49-Abl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="erK-mu-gUA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="635" y="70"/>
+        </scene>
+        <!--View Controller2-->
+        <scene sceneID="TOA-lS-4Ln">
+            <objects>
+                <viewController id="r6j-H0-8lv" customClass="ViewController2" customModule="iosschulung" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oY2-do-cDi">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5O-8L-ExF">
+                                <rect key="frame" x="172" y="284" width="46" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonklick:" destination="r6j-H0-8lv" eventType="touchUpInside" id="W3J-I3-z8j"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9vS-uK-j2U"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9UX-fF-vuY"/>
+                    <connections>
+                        <outlet property="button" destination="o5O-8L-ExF" id="tFy-uG-6O4"/>
+                        <outlet property="buttonklick" destination="o5O-8L-ExF" id="ze9-DO-TG3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VeW-f8-Mre" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1401.5384615384614" y="75.355450236966817"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bsdwest.png" width="371" height="136"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
