@@ -162,7 +162,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="buttonklick:" destination="r6j-H0-8lv" eventType="touchUpInside" id="W3J-I3-z8j"/>
+                                    <action selector="klick:" destination="r6j-H0-8lv" eventType="touchUpInside" id="1yt-lp-KhE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -171,8 +171,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="9UX-fF-vuY"/>
                     <connections>
-                        <outlet property="button" destination="o5O-8L-ExF" id="tFy-uG-6O4"/>
-                        <outlet property="buttonklick" destination="o5O-8L-ExF" id="ze9-DO-TG3"/>
+                        <outlet property="button1" destination="o5O-8L-ExF" id="LRf-fg-TnT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VeW-f8-Mre" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

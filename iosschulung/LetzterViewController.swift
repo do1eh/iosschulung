@@ -14,12 +14,23 @@ import UIKit
 class ViewController2: UIViewController {
     
     
-    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var button1: UIButton!
     
     
-    @IBAction func buttonklick(_ sender: Any) {
-        
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("test")
       
+    }
+   
+    @IBAction func klick(_ sender: Any) {
+        
+        self.navigationController?.popToRootViewController(animated: true)
+        
     }
     
    
